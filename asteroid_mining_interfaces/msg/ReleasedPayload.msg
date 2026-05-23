@@ -1,0 +1,3 @@
+bool active
+float64 mass
+asteroid_mining_interfaces/ThirdOrderKinematicsThreeDof kinematics
