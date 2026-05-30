@@ -144,7 +144,7 @@ asteroid_mining::SiphonCarrier cnv(const asteroid_mining_interfaces::msg::Siphon
     const auto [siphon_angular_pos, siphon_angular_vel, siphon_angular_acc] = cnv(in.siphon_angular_kinematics);
     const auto [bottom_lifting_side_mass_pos, bottom_lifting_side_mass_vel, bottom_lifting_side_mass_acc] = cnv(in.bottom_lifting_side_mass_kinematics);
 
-    std::vector<Eigen::Vector3d> mass_effective_forces(in.n);
+    asteroid_mining::SiphonCarrier::MassEffectiveForceT mass_effective_forces(in.n);
     std::transform(
         in.mass_effective_forces.cbegin(),
         in.mass_effective_forces.cend(),
